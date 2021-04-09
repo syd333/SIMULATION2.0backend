@@ -3,8 +3,8 @@ class CreateReplies < ActiveRecord::Migration[6.1]
     create_table :replies do |t|
       t.string :title
       t.string :message
-      t.references :user_id, null: false, foreign_key: true
-      t.references :miss_id, null: false, foreign_key: true
+      t.references :user, null: false, foreign_key: true
+      t.references :miss, null: false, foreign_key: true
 
       t.timestamps
     end

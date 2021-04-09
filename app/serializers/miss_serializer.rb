@@ -1,6 +1,6 @@
 class MissSerializer < ActiveModel::Serializer
-  attributes :id, :city, :zip, :lat, :long, :title, :message, :user_id
+  attributes :id, :city, :zip, :lat, :long, :title, :message, :user
 
-  belongs_to :user_id
+  belongs_to :user
   has_many :replies, through: :users
 end

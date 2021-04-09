@@ -7,7 +7,7 @@ class CreateMisses < ActiveRecord::Migration[6.1]
       t.decimal :long
       t.string :title
       t.string :message
-      t.references :user_id
+
       t.timestamps
     end
   end

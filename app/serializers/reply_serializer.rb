@@ -1,6 +1,6 @@
 class ReplySerializer < ActiveModel::Serializer
-  attributes :id, :title, :message, :user_id, :miss_id
+  attributes :id, :title, :message, :user, :miss
 
-  belongs_to :user_id
-  belongs_to :miss_id
+  belongs_to :user
+  belongs_to :miss
 end
