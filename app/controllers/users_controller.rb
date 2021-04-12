@@ -1,5 +1,11 @@
 class UsersController < ApplicationController
     # skip_before_action :authorized, only: [:login]
+
+    def index 
+        users = User.all
+        render json: users 
+      end
+    
     
     def getuser 
         render json: {user: UserSerializer.new(current_user)}, status: :accepted
