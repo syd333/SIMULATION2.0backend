@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    skip_before_action :authorized, only: [:login, :create]
+    skip_before_action :authorized, only: [:create]
 
     def index 
         users = User.all
@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     end
 
     def show
-        user = User.find_by(params[:id])
+        user = User.find(params[:id])
         render json: user
     end
 
@@ -26,19 +26,9 @@ class UsersController < ApplicationController
         end
     end
 
-    def login
-        user = User.find_by(email: params[:email])
-        if user && user.authenticate(params[:password])                                       
-          token = issue_token({user_id: user.id})
-          render json: {user: UserSerializer.new(user), jwt: token}, status: :accepted
-        else
-          render json: {error: 'That user could not be found'}, status: :unauthorized
-        end
-      end
-
     private
     def user_params
-        params.permit(:email, :password)
+        params.require(:user).permit(:email, :password)
     end
 
 end
