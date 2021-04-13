@@ -8,6 +8,7 @@ class UsersController < ApplicationController
     
     
     def getuser 
+
         render json: {user: UserSerializer.new(current_user)}, status: :accepted
     end
 
@@ -28,7 +29,7 @@ class UsersController < ApplicationController
 
     private
     def user_params
-        params.require(:user).permit(:email, :password)
+        params.require(:user).permit(:id, :email, :password)
     end
 
 end

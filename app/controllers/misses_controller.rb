@@ -24,6 +24,6 @@ class MissesController < ApplicationController
 
     private
     def miss_params
-        params.permit(:id, :city, :state, :zip, :lat, :long, :title, :message)
+        params.permit(:id, :city, :state, :zip, :lat, :long, :title, :message, :user)
     end
 end
