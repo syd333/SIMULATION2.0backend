@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   post '/signup', to: 'users#create'
   get '/getuser', to: 'users#getuser'
   get 'get/misses', to: 'misses#index'
+  get '/get/misses/:id', to: 'misses#show'
+  post '/misses/new', to: 'misses#create'
 end

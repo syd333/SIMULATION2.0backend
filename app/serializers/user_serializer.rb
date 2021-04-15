@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :email
+  attributes :id, :email, :lat, :long
 
   # has_many :misses
   # has_many :replies, through: :misses
