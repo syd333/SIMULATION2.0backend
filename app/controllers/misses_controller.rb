@@ -12,6 +12,8 @@ class MissesController < ApplicationController
     end
 
     def create 
+        # render errors with status
+        # error full messages 
         miss = Miss.create(miss_params)
         render json: miss
     end
@@ -24,6 +26,6 @@ class MissesController < ApplicationController
 
     private
     def miss_params
-        params.permit(:id, :title, :message, :user)
+        params.require(:misses).permit(:id, :title, :message, :user)
     end
 end
