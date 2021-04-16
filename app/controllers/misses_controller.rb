@@ -11,12 +11,20 @@ class MissesController < ApplicationController
         render json: miss
     end
 
-    def create 
+    # def create 
         # render errors with status
         # error full messages 
-        miss = Miss.create(miss_params)
-        render json: miss
+    #     miss = Miss.create(miss_params)
+    #     render json: miss
+    # end
+    def create 
+        @miss = Miss.create(miss_params)
+        if @miss.valid?
+            render json: @miss, status: :created
+        else 
+            render json: {errors: @miss.errors.full_message}, status: :unprocessable_entity
     end
+end
 
     def destroy
         miss = Miss.find(params[:id])
@@ -26,6 +34,6 @@ class MissesController < ApplicationController
 
     private
     def miss_params
-        params.require(:misses).permit(:id, :title, :message, :user)
+        params.require(:miss).permit(:id, :title, :message, :user_id)
     end
 end
