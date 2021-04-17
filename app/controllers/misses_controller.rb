@@ -1,6 +1,8 @@
 class MissesController < ApplicationController
     skip_before_action :authorized
-    
+    #extend Model geocoder 
+    # not Miss.all but particular area
+    # get users collection // .near([lat, long], 5), mile
     def index 
         misses = Miss.all
         render json: misses 
@@ -34,6 +36,6 @@ end
 
     private
     def miss_params
-        params.require(:miss).permit(:id, :title, :message, :user_id)
+        params.require(:miss).permit(:id, :title, :message, :user_id, :lat, :long)
     end
 end

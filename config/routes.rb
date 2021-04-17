@@ -11,3 +11,5 @@ Rails.application.routes.draw do
   get '/get/misses/:id', to: 'misses#show'
   post '/misses/new', to: 'misses#create'
 end
+
+# instead of all "misses/index" particular area
