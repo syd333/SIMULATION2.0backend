@@ -9,17 +9,17 @@ require 'faker'
     User.create(email: email, password: "1234", lat: lat, long: long)
 end
 
-# Favorite.create(like: true, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
-# Favorite.create(like: false, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
-# Favorite.create(like: true, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
-# Favorite.create(like: false, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
-# Favorite.create(like: false, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
-# Favorite.create(like: true, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
-# Favorite.create(like: false, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
-# Favorite.create(like: true, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
-# Favorite.create(like: false, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
-# Favorite.create(like: true, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
-# Favorite.create(like: true, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
+Favorite.create(like: true, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
+Favorite.create(like: false, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
+Favorite.create(like: true, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
+Favorite.create(like: false, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
+Favorite.create(like: false, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
+Favorite.create(like: true, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
+Favorite.create(like: false, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
+Favorite.create(like: true, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
+Favorite.create(like: false, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
+Favorite.create(like: true, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
+Favorite.create(like: true, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
 
 Miss.create(title: 'over 20 years ago', message: "You stayed off Minnesota btwn Cordova and parkridge and I live on LaSalle and Parkridge. 
 well I know this is far fetched but if you still around I would like to reestablish or rekindle",  user_id: User.all.sample[:id], lat: 34.07715606689453, long: -118.25827026367188)
