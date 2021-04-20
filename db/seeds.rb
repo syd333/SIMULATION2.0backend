@@ -8,13 +8,6 @@ require 'faker'
     long = -118.25827026367188
     User.create(email: email, password: "1234", lat: lat, long: long)
 end
-# put lat + long back
-# lat: 34.07715606689453, long: -118.25827026367188
-# 10.times do 
-#     title = Faker::Book.title
-#     message = Faker::Quotes::Shakespeare.romeo_and_juliet_quote
-#     Miss.create(title: title, message: message, user_id: User.all.sample[:id])
-# end
 
 # Favorite.create(like: true, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
 # Favorite.create(like: false, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])

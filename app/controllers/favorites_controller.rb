@@ -1,6 +1,6 @@
 class FavoritesController < ApplicationController
     skip_before_action :authorized
-    
+
     def index 
         favorites = Favorite.all
         render json: favorites 
@@ -11,14 +11,20 @@ class FavoritesController < ApplicationController
         render json: favorite
     end
 
-    def create 
-        @favorite = Favorite.create(favorite_params)
-        if @favorite.valid?
-            render json: @favorite, status: :created
-        else 
-            render json: {errors: @favorite.errors.full_message}, status: :unprocessable_entity
+    def update 
+        favorite = Favorite.find(params[:id])
+        favorite.update(like: params[:like])
+        render json: favorite
     end
-end
+
+#     def create 
+#         @favorite = Favorite.create(favorite_params)
+#         if @favorite.valid?
+#             render json: @favorite, status: :created
+#         else 
+#             render json: {errors: @favorite.errors.full_message}, status: :unprocessable_entity
+#     end
+# end
 
     def destroy
         favorite = Favorite.find(params[:id])
