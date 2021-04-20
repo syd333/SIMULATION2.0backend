@@ -16,6 +16,18 @@ end
 #     Miss.create(title: title, message: message, user_id: User.all.sample[:id])
 # end
 
+# Favorite.create(like: true, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
+# Favorite.create(like: false, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
+# Favorite.create(like: true, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
+# Favorite.create(like: false, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
+# Favorite.create(like: false, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
+# Favorite.create(like: true, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
+# Favorite.create(like: false, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
+# Favorite.create(like: true, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
+# Favorite.create(like: false, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
+# Favorite.create(like: true, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
+# Favorite.create(like: true, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
+
 Miss.create(title: 'over 20 years ago', message: "You stayed off Minnesota btwn Cordova and parkridge and I live on LaSalle and Parkridge. 
 well I know this is far fetched but if you still around I would like to reestablish or rekindle",  user_id: User.all.sample[:id], lat: 34.07715606689453, long: -118.25827026367188)
 Miss.create(title: 'Missing college girl I knew', message: "where have you gone? we went to CAL U... miss you tons",  user_id: User.all.sample[:id], lat: 34.07715606689453, long: -118.25827026367188)
