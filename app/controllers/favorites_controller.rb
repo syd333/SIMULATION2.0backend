@@ -7,24 +7,20 @@ class FavoritesController < ApplicationController
     end
 
     def show 
-        favorite = Favorite.find(param[:id])
-        render json: favorite
-    end
-
-    def update 
         favorite = Favorite.find(params[:id])
-        favorite.update(like: params[:like])
         render json: favorite
     end
 
-#     def create 
-#         @favorite = Favorite.create(favorite_params)
-#         if @favorite.valid?
-#             render json: @favorite, status: :created
-#         else 
-#             render json: {errors: @favorite.errors.full_message}, status: :unprocessable_entity
-#     end
-# end
+    # def update 
+    #     favorite = Favorite.find(params[:id])
+    #     favorite.update(like: params[:like])
+    #     render json: favorite
+    # end
+
+    def create 
+        favorite = Favorite.create(favorite_params)
+        render json: favorite
+    end
 
     def destroy
         favorite = Favorite.find(params[:id])

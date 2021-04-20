@@ -9,7 +9,7 @@ class MissesController < ApplicationController
     end
 
     def show 
-        miss = Miss.find(param[:id])
+        miss = Miss.find(params[:id])
         render json: miss
     end
 
