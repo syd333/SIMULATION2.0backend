@@ -1,8 +1,8 @@
 class User < ApplicationRecord
-    has_many :misses
+    has_many :misses, dependent: :destroy
     has_many :replies, through: :misses
 
-    has_many :favorites
+    has_many :favorites, dependent: :destroy
     has_many :favoritedListings, :through => :favorites, :source => :listing
 
     has_secure_password
