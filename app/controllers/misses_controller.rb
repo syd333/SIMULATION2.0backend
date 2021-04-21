@@ -4,7 +4,7 @@ class MissesController < ApplicationController
     # not Miss.all but particular area
     # get users collection // .near([lat, long], 5), mile
     def index 
-        misses = Miss.all
+        misses = Miss.all.order(created_at: :desc)
         render json: misses 
     end
 
