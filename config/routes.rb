@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   post '/misses/new', to: 'misses#create'
   get 'favorites/', to: 'favorites#index'
   post 'replies/new', to: 'replies#create'
+  get '/replies', to: 'replies#index'
 end
 
 # instead of all "misses/index" particular area for geocoded
