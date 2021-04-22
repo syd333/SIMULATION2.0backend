@@ -11,13 +11,6 @@ class FavoritesController < ApplicationController
         render json: favorite
     end
 
-    # def update 
-    #     favorite = Favorite.create_or_find_by(params[:id])
-    #     byebug
-    #     favorite.update(like: params[:like])
-    #     render json: favorite
-    # end
-
     def create 
         favorite = Favorite.create(favorite_params)
         render json: favorite

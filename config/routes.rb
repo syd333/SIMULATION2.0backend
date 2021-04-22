@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get '/get/misses/:id', to: 'misses#show'
   post '/misses/new', to: 'misses#create'
   get 'favorites/', to: 'favorites#index'
+  post 'replies/new', to: 'replies#create'
 end
 
 # instead of all "misses/index" particular area for geocoded
