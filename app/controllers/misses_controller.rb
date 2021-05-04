@@ -13,6 +13,7 @@ class MissesController < ApplicationController
         render json: miss
     end
 
+
     def create 
         @miss = Miss.create(miss_params)
         if @miss.valid?

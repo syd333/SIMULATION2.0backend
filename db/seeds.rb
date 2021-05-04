@@ -2,12 +2,17 @@ require 'rest-client'
 require 'json'
 require 'faker'
 
+
+rand_user = User.all.sample[:id]
+rand_miss = Miss.all.sample[:id]
+
 10.times do 
     email = Faker::Internet.email 
     lat = 34.07715606689453
     long = -118.25827026367188
     User.create(email: email, password: "1234", lat: lat, long: long)
 end
+
 
 Favorite.create(like: true, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
 Favorite.create(like: false, user_id: User.all.sample[:id], miss_id: Miss.all.sample[:id])
