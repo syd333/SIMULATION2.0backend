@@ -8,6 +8,11 @@ class MissesController < ApplicationController
         render json: misses 
     end
 
+    def address
+        [street, city, state, country].compact.join(', ')
+      end
+      
+
     def show 
         miss = Miss.find(params[:id])
         render json: miss
