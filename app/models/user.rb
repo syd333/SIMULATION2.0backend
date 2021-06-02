@@ -6,8 +6,10 @@ class User < ApplicationRecord
     #         obj.country = geo.country_code
     #     end
     # end
-
-    # after_validation :reverse_geocode
+    
+    reverse_geocoded_by :latitude, :longitude
+    after_validation :reverse_geocode
+    
     has_many :misses, dependent: :destroy
     has_many :replies, through: :misses
 

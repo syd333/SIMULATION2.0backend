@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
     skip_before_action :authorized, only: [:create]
+    # reverse_geocoded_by :latitude, :longitude
+    # after_validation :reverse_geocode
 
     def index 
         users = User.all
