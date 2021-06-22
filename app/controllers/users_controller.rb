@@ -6,7 +6,6 @@ class UsersController < ApplicationController
         render json: users 
       end
     
-    
     def getuser
         render json: {user: UserSerializer.new(current_user)}, status: :accepted
     end

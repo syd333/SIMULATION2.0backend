@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :email, :lat, :long
+  attributes :id, :email, :lat, :long, :password_digest
 
   # reverse_geocoded_by :latitude, :longitude => :lat, :long
   # after_validation :reverse_geocode

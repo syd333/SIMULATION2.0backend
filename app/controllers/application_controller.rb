@@ -35,6 +35,13 @@ class ApplicationController < ActionController::API
         render json: { message: 'Please log in' }, status: :unauthorized unless logged_in?
       end
 
+      # def index 
+      #   if Rails.env.production?
+      #     @country = request.location.country
+      #     @city = request.location.city
+      #   end
+      # end
+
     end 
   
     
